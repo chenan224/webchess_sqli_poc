@@ -2,7 +2,7 @@
 
 1. register 1 new user with password:123
 2. login as the new user
-3. send the following malicious packet
+3. modify origin/Referer/PHPSESSID, then send the following malicious packet: 
 
 POST /webchess/mainmenu.php HTTP/1.1
 
